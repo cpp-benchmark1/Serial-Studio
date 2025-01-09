@@ -30,7 +30,7 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
-        sudo apt install libgl1-mesa-dev
+        sudo apt install libgl1-mesa-dev qt6-base-dev
         cmake -B build -DPRODUCTION_OPTIMIZATION=ON -DCMAKE_BUILD_TYPE=Release
         cmake --build build 
     - name: Perform CodeQL Analysis
